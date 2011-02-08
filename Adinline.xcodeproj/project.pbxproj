@@ -1,0 +1,385 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		2A33161D13019B4300DFD907 /* Build Directory */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 2A33162013019B4300DFD907 /* Build configuration list for PBXAggregateTarget "Build Directory" */;
+			buildPhases = (
+				2A33162213019B5500DFD907 /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = "Build Directory";
+			productName = "Build Directory";
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		2A07206F12FCF2FE0050B027 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A07206E12FCF2FE0050B027 /* Cocoa.framework */; };
+		2AC004CD12FD076500EC0A2F /* MGMAdinline.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AC004CC12FD076500EC0A2F /* MGMAdinline.m */; };
+		2AC004D512FD8D5000EC0A2F /* Adium.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AC004D412FD8D5000EC0A2F /* Adium.framework */; };
+		2ADAC3A912FCF7F700E0629F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2ADAC3A612FCF7F700E0629F /* InfoPlist.strings */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2A33162313019B6200DFD907 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2A07206212FCF2FC0050B027 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2A33161D13019B4300DFD907;
+			remoteInfo = "Build Directory";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2A07206B12FCF2FE0050B027 /* Adinline.AdiumPlugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Adinline.AdiumPlugin; sourceTree = BUILT_PRODUCTS_DIR; };
+		2A07206E12FCF2FE0050B027 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		2A07207112FCF2FE0050B027 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		2A07207212FCF2FE0050B027 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		2A07207312FCF2FE0050B027 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		2AC004CB12FD076500EC0A2F /* MGMAdinline.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGMAdinline.h; sourceTree = "<group>"; };
+		2AC004CC12FD076500EC0A2F /* MGMAdinline.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGMAdinline.m; sourceTree = "<group>"; };
+		2AC004D412FD8D5000EC0A2F /* Adium.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Adium.framework; path = "../../../Users/grmrgecko/Library/Developer/Xcode/DerivedData/Adium-gciovdnwphndewdypqlkgwdqtpun/Build/Products/Debug/Adium.framework"; sourceTree = "<group>"; };
+		2ADAC39912FCF78600E0629F /* prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = prefix.pch; path = Classes/prefix.pch; sourceTree = "<group>"; };
+		2ADAC3A712FCF7F700E0629F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		2ADAC3AB12FCF80100E0629F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2A07206812FCF2FE0050B027 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2A07206F12FCF2FE0050B027 /* Cocoa.framework in Frameworks */,
+				2AC004D512FD8D5000EC0A2F /* Adium.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2A07206012FCF2FC0050B027 = {
+			isa = PBXGroup;
+			children = (
+				2ADAC39812FCF78600E0629F /* Classes */,
+				2ADAC39E12FCF79A00E0629F /* Other Sources */,
+				2ADAC3A512FCF7F700E0629F /* Resources */,
+				2A07206D12FCF2FE0050B027 /* Frameworks */,
+				2A07206C12FCF2FE0050B027 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2A07206C12FCF2FE0050B027 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2A07206B12FCF2FE0050B027 /* Adinline.AdiumPlugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2A07206D12FCF2FE0050B027 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2AC004D412FD8D5000EC0A2F /* Adium.framework */,
+				2A07206E12FCF2FE0050B027 /* Cocoa.framework */,
+				2A07207012FCF2FE0050B027 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2A07207012FCF2FE0050B027 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2A07207112FCF2FE0050B027 /* AppKit.framework */,
+				2A07207212FCF2FE0050B027 /* CoreData.framework */,
+				2A07207312FCF2FE0050B027 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		2ADAC39812FCF78600E0629F /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				2AC004CB12FD076500EC0A2F /* MGMAdinline.h */,
+				2AC004CC12FD076500EC0A2F /* MGMAdinline.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		2ADAC39E12FCF79A00E0629F /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				2ADAC39912FCF78600E0629F /* prefix.pch */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		2ADAC3A512FCF7F700E0629F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2ADAC3A612FCF7F700E0629F /* InfoPlist.strings */,
+				2ADAC3AB12FCF80100E0629F /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2A07206A12FCF2FE0050B027 /* Adinline */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2A07207D12FCF2FF0050B027 /* Build configuration list for PBXNativeTarget "Adinline" */;
+			buildPhases = (
+				2A07206712FCF2FE0050B027 /* Sources */,
+				2A07206812FCF2FE0050B027 /* Frameworks */,
+				2A07206912FCF2FE0050B027 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2A33162413019B6200DFD907 /* PBXTargetDependency */,
+			);
+			name = Adinline;
+			productName = Adinline;
+			productReference = 2A07206B12FCF2FE0050B027 /* Adinline.AdiumPlugin */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2A07206212FCF2FC0050B027 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 2A07206512FCF2FC0050B027 /* Build configuration list for PBXProject "Adinline" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 2A07206012FCF2FC0050B027;
+			productRefGroup = 2A07206C12FCF2FE0050B027 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2A07206A12FCF2FE0050B027 /* Adinline */,
+				2A33161D13019B4300DFD907 /* Build Directory */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2A07206912FCF2FE0050B027 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2ADAC3A912FCF7F700E0629F /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2A33162213019B5500DFD907 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [ \"$SRCROOT/build\" != \"$SYMROOT\" ]; then\nif [ -d \"$SRCROOT/build\" ]; then\n/bin/rm -Rf \"$SRCROOT/build\"\nfi\n/bin/ln -fs \"$SYMROOT\" \"$SRCROOT/build\"\nfi";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2A07206712FCF2FE0050B027 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2AC004CD12FD076500EC0A2F /* MGMAdinline.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2A33162413019B6200DFD907 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2A33161D13019B4300DFD907 /* Build Directory */;
+			targetProxy = 2A33162313019B6200DFD907 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2ADAC3A612FCF7F700E0629F /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2ADAC3A712FCF7F700E0629F /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2A07207B12FCF2FF0050B027 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		2A07207C12FCF2FF0050B027 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		2A07207E12FCF2FF0050B027 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ADIUM = "/Development/adium-1.4.1";
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = (
+					ppc,
+					i386,
+					x86_64,
+				);
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = "\"$(ADIUM)/build/Debug/\"";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Classes/prefix.pch;
+				GCC_VERSION = 4.2;
+				HEADER_SEARCH_PATHS = (
+					"\"$(ADIUM)/Source\"",
+					"\"$(ADIUM)/Plugins\"",
+				);
+				INFOPLIST_FILE = Resources/Info.plist;
+				INSTALL_PATH = "\"$(HOME)/Library/Application Support/Adium 2.0/PlugIns/\"";
+				MACOSX_DEPLOYMENT_TARGET = 10.4;
+				"MACOSX_DEPLOYMENT_TARGET[arch=x86_64]" = 10.5;
+				OTHER_LDFLAGS = (
+					"-undefined",
+					suppress,
+					"-undefined",
+					dynamic_lookup,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALID_ARCHS = "ppc i386 x86_64";
+				WRAPPER_EXTENSION = AdiumPlugin;
+			};
+			name = Debug;
+		};
+		2A07207F12FCF2FF0050B027 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ADIUM = "/Development/adium-1.4.1";
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = (
+					ppc,
+					i386,
+					x86_64,
+				);
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = "\"$(ADIUM)/build/Debug/\"";
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Classes/prefix.pch;
+				GCC_VERSION = 4.2;
+				HEADER_SEARCH_PATHS = (
+					"\"$(ADIUM)/Source\"",
+					"\"$(ADIUM)/Plugins\"",
+				);
+				INFOPLIST_FILE = Resources/Info.plist;
+				INSTALL_PATH = "\"$(HOME)/Library/Application Support/Adium 2.0/PlugIns/\"";
+				MACOSX_DEPLOYMENT_TARGET = 10.4;
+				"MACOSX_DEPLOYMENT_TARGET[arch=x86_64]" = 10.5;
+				OTHER_LDFLAGS = (
+					"-undefined",
+					suppress,
+					"-undefined",
+					dynamic_lookup,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALID_ARCHS = "ppc i386 x86_64";
+				WRAPPER_EXTENSION = AdiumPlugin;
+			};
+			name = Release;
+		};
+		2A33161E13019B4300DFD907 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		2A33161F13019B4300DFD907 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2A07206512FCF2FC0050B027 /* Build configuration list for PBXProject "Adinline" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2A07207B12FCF2FF0050B027 /* Debug */,
+				2A07207C12FCF2FF0050B027 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2A07207D12FCF2FF0050B027 /* Build configuration list for PBXNativeTarget "Adinline" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2A07207E12FCF2FF0050B027 /* Debug */,
+				2A07207F12FCF2FF0050B027 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2A33162013019B4300DFD907 /* Build configuration list for PBXAggregateTarget "Build Directory" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2A33161E13019B4300DFD907 /* Debug */,
+				2A33161F13019B4300DFD907 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2A07206212FCF2FC0050B027 /* Project object */;
+}

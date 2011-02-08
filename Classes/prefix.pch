@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'Adinline' target in the 'Adinline' project
+//
+
+#ifdef __OBJC__
+	#import <Cocoa/Cocoa.h>
+#endif
