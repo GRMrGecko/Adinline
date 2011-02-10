@@ -10,13 +10,15 @@
 #import <Adium/AIPlugin.h>
 #import <Adium/AISharedAdium.h>
 #import <Adium/AIChat.h>
+#import <Adium/AIListObject.h>
+#import <Adium/AIContactControllerProtocol.h>
 #import <Adium/AICorePluginLoader.h>
 #import <Adium/AIContentControllerProtocol.h>
 #import <Adium/AIInterfaceControllerProtocol.h>
 #import "WebKit Message View/AIWebKitMessageViewController.h"
 
 @interface MGMAdinline : AIPlugin <AIHTMLContentFilter> {
-	
+	BOOL allowsStrangers;
 }
 
 @end
