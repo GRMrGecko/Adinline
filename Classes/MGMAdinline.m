@@ -48,13 +48,27 @@ NSString * const MGMAIAllowStrangers = @"MGMAIAllowStrangers";
 					continue;
 				range.location = linkStartRange.location+linkStartRange.length;
 				range.length = [html length]-range.location;
-				NSRange linkEndRange = [html rangeOfString:@"<" options:NSCaseInsensitiveSearch range:range];
+				NSRange linkEndRange = [html rangeOfString:@"</a" options:NSCaseInsensitiveSearch range:range];
 				if (linkEndRange.location==NSNotFound)
 					continue;
 				range.location = linkEndRange.location+linkEndRange.length;
 				range.length = [html length]-range.location;
 				linkRange = NSMakeRange(linkStartRange.location+linkStartRange.length, linkEndRange.location-(linkStartRange.location+linkStartRange.length));
-				NSString *link = [html substringWithRange:linkRange];
+				NSMutableString *link = [[html substringWithRange:linkRange] mutableCopy];
+				NSRange tagRange = NSMakeRange(0, [link length]);
+				while (YES) {
+					NSRange tagStartRange = [link rangeOfString:@"<" options:NSCaseInsensitiveSearch range:tagRange];
+					if (tagStartRange.location==NSNotFound)
+						break;
+					tagRange.location = tagStartRange.location;
+					tagRange.length = [link length]-tagRange.location;
+					NSRange tagEndRange = [link rangeOfString:@">" options:NSCaseInsensitiveSearch range:tagRange];
+					if (tagEndRange.location==NSNotFound)
+						break;
+					[link replaceCharactersInRange:NSMakeRange(tagStartRange.location, (tagEndRange.location+tagEndRange.length)-tagStartRange.location) withString:@""];
+					tagRange.location = tagStartRange.location;
+					tagRange.length = [link length]-tagRange.location;
+				}
 				if ([imageExtensions containsObject:[[[[NSURL URLWithString:link] path] pathExtension] lowercaseString]]) {
 					if (shouldScroll==nil) {
 						WebView *webview = (WebView *)[[(id<MGMChatViewController>)[[[theContent chat] chatContainer] chatViewController] messageDisplayController] messageView];
@@ -65,6 +79,7 @@ NSString * const MGMAIAllowStrangers = @"MGMAIAllowStrangers";
 					range.location += [image length]-linkRange.length;
 					range.length = [html length]-range.location;
 				}
+				[link release];
 			} else {
 				break;
 			}
