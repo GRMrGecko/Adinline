@@ -48,13 +48,13 @@ NSString * const MGMAIAllowStrangers = @"MGMAIAllowStrangers";
 					continue;
 				range.location = linkStartRange.location+linkStartRange.length;
 				range.length = [html length]-range.location;
+				NSRange linkReplaceEndRange = [html rangeOfString:@"<" options:NSCaseInsensitiveSearch range:range];
 				NSRange linkEndRange = [html rangeOfString:@"</a" options:NSCaseInsensitiveSearch range:range];
 				if (linkEndRange.location==NSNotFound)
 					continue;
 				range.location = linkEndRange.location+linkEndRange.length;
 				range.length = [html length]-range.location;
-				linkRange = NSMakeRange(linkStartRange.location+linkStartRange.length, linkEndRange.location-(linkStartRange.location+linkStartRange.length));
-				NSMutableString *link = [[html substringWithRange:linkRange] mutableCopy];
+				NSMutableString *link = [[html substringWithRange:NSMakeRange(linkStartRange.location+linkStartRange.length, linkEndRange.location-(linkStartRange.location+linkStartRange.length))] mutableCopy];
 				NSRange tagRange = NSMakeRange(0, [link length]);
 				while (YES) {
 					NSRange tagStartRange = [link rangeOfString:@"<" options:NSCaseInsensitiveSearch range:tagRange];
@@ -75,8 +75,9 @@ NSString * const MGMAIAllowStrangers = @"MGMAIAllowStrangers";
 						shouldScroll = [webview stringByEvaluatingJavaScriptFromString:@"nearBottom();"];
 					}
 					NSString *image = [NSString stringWithFormat:@"<img src=\"%@\" style=\"max-width: 100%%; max-height: 100%%;\" onLoad=\"imageSwap(this, false);alignChat(%@);\" />", link, shouldScroll];
-					[html replaceCharactersInRange:linkRange withString:image];
-					range.location += [image length]-linkRange.length;
+					NSRange replaceRange = NSMakeRange(linkStartRange.location+linkStartRange.length, linkReplaceEndRange.location-(linkStartRange.location+linkStartRange.length));
+					[html replaceCharactersInRange:replaceRange withString:image];
+					range.location += [image length]-replaceRange.length;
 					range.length = [html length]-range.location;
 				}
 				[link release];
